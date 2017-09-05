@@ -1,8 +1,14 @@
 language: generic
-os: osx
+os:
+    - linux
+    - osx
 script: bash ./deploy.sh
+addons:
+    apt:
+        packages:
+            - liblzma-dev
 before_install:
-    - brew install xz
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install xz; fi
 deploy:
     provider: releases
     api_key:
