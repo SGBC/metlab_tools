@@ -12,3 +12,5 @@ deploy:
         repo: SGBC/metlab_tools
         branch: master
         tags: true
+notifications:
+    email: false
