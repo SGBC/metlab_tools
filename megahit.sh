@@ -9,7 +9,7 @@ make
 
 mkdir ../megahit
 # move all megahit exec
-find megahi* -type f -depth 0 -exec mv {} ../megahit \;
+find . -maxdepth 1 -type f -name "megahi*" -exec cp {} ../megahit \;
 cd ..
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
