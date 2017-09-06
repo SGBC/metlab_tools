@@ -2,3 +2,4 @@
 set -e
 
 ./samtools.sh
+./megahit.sh
