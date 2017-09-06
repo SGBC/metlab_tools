@@ -11,8 +11,9 @@ make
 mkdir ../samtools
 chmod +x samtools
 mv samtools ../samtools/
+cd ..
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-    tar czf ../samtools-darwin.tar.gz ../samtools
-else tar czf ../samtools-linux.tar.gz ../samtools
+    tar czf samtools-darwin.tar.gz samtools
+else tar czf samtools-linux.tar.gz samtools
 fi
