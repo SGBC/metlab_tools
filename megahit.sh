@@ -5,7 +5,10 @@ wget https://github.com/voutcn/megahit/archive/v1.1.2.tar.gz
 tar xvfz v1.1.2.tar.gz
 # compile with gcc
 cd megahit-1.1.2
-make
+if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+    CXX=g++-4.8 make
+else make
+fi
 
 mkdir ../megahit
 # move all megahit exec
