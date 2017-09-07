@@ -6,7 +6,7 @@ tar xvfz v1.1.2.tar.gz
 # compile with gcc
 cd megahit-1.1.2
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-    CXX=g++-4.8 make
+    CXX=/usr/local/Cellar/gcc/*/bin/c++ make
 else make
 fi
 
