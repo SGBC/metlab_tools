@@ -2,8 +2,6 @@ language: generic
 os:
     - linux
     - osx
-compiler:
-    - gcc
 script: bash ./deploy.sh
 addons:
     apt:
