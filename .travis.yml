@@ -9,6 +9,7 @@ addons:
             - liblzma-dev
 before_install:
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install xz; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install gcc; fi
 deploy:
     provider: releases
     api_key:
@@ -16,6 +17,7 @@ deploy:
     file_glob: true
     file:
         - samtools*.tar.gz
+        - megahit*.tar.gz
     skip_cleanup: true
     on:
         repo: SGBC/metlab_tools
